@@ -2,6 +2,14 @@
 <Project Type="Project" LVVersion="13008000">
 	<Property Name="NI.LV.All.SourceOnly" Type="Bool">false</Property>
 	<Property Name="NI.Project.Description" Type="Str">This example demonstrates how to control a simulated iRobot Create.</Property>
+	<Property Name="PrivateNetwork.CycleTime" Type="Int">1000</Property>
+	<Property Name="PrivateNetwork.GUIDTable" Type="Bin">%Q#!!!!!!!1!+E!Q`````S"(65F%,V*F:G6S:7ZD:6:B=EZB&lt;75P1W^N=%FU:7V*2!!!$5!$!!&gt;/&gt;7VF=GFD!'A!]&lt;YKPOU!!!!#*UZ*8U2F&gt;'6S&lt;7FO;8.U;7-A4G6U&gt;W^S;S"1=G^W;72F=CZM&gt;GRJ9B./5%&amp;U&gt;(*J9H6U:5RJ=X1O9X2M!#2!5!!#!!!!!26798*J97*M:3"(65F%)'VB=("J&lt;G=!)%"!!!(`````!!)44G^E:3""&gt;(2S;7*V&gt;'5A4'FT&gt;!!"!!-!!!!!!!!!!!</Property>
+	<Property Name="PrivateNetwork.NetworkName" Type="Str">Network_0</Property>
+	<Property Name="PrivateNetwork.NetworkSpeed" Type="UInt">0</Property>
+	<Property Name="PrivateNetwork.NetworkType" Type="UInt">1</Property>
+	<Property Name="PrivateNetwork.NumComputingDevices" Type="Int">0</Property>
+	<Property Name="PrivateNetwork.SMBOffset" Type="Int">66</Property>
+	<Property Name="PrivateNetwork.UDPPort" Type="UInt">40000</Property>
 	<Item Name="My Computer" Type="My Computer">
 		<Property Name="IOScan.Faults" Type="Str"></Property>
 		<Property Name="IOScan.NetVarPeriod" Type="UInt">100</Property>
@@ -392,9 +400,26 @@ AddOutputFilter chunkFilter
 			<Item Name="LED.ctl" Type="VI" URL="../../iRobot/Actuator/LED.ctl"/>
 			<Item Name="LED.vi" Type="VI" URL="../../iRobot/Actuator/LED.vi"/>
 			<Item Name="Low-Side Driver + Wheel Overcurrent.ctl" Type="VI" URL="../../iRobot/Sensor/Low-Side Driver + Wheel Overcurrent.ctl"/>
+			<Item Name="niFpgaDynamicAddResources.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/common/dynamic/niFpgaDynamicAddResources.vi"/>
+			<Item Name="niFpgaHostInterfaceSession.ctl" Type="VI" URL="../../../../../../../Program Files (x86)/National Instruments/LabVIEW 2013/Targets/NI/FPGA/StockFPGA_IntfPrivate/ScriptTemplates/niFpgaHostInterfaceSession.ctl"/>
 			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
+			<Item Name="niFpgaNodeNameForErrorReporting.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/common/niFpgaNodeNameForErrorReporting.ctl"/>
+			<Item Name="niFpgaSimulationCallBeginRW.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/Simulation/niFpgaSimulationCallBeginRW.vi"/>
+			<Item Name="niFpgaWaitOnOcc.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/interface/common/niFpgaWaitOnOcc.vi"/>
+			<Item Name="niLvFpga_Close_Dynamic.vi" Type="VI" URL="/&lt;vilib&gt;/FPGAPlugInAG/Dynamic/niLvFpga_Close_Dynamic.vi"/>
+			<Item Name="niLvFpga_Open_myRIO-1900.vi" Type="VI" URL="/&lt;vilib&gt;/FPGAPlugInAG/myRIO-1900/niLvFpga_Open_myRIO-1900.vi"/>
+			<Item Name="niLvFpga_Open_myRIO-1950.vi" Type="VI" URL="/&lt;vilib&gt;/FPGAPlugInAG/myRIO-1950/niLvFpga_Open_myRIO-1950.vi"/>
+			<Item Name="niLvFpga_Reset_Dynamic.vi" Type="VI" URL="/&lt;vilib&gt;/FPGAPlugInAG/Dynamic/niLvFpga_Reset_Dynamic.vi"/>
+			<Item Name="niLvFpga_Run_Dynamic.vi" Type="VI" URL="/&lt;vilib&gt;/FPGAPlugInAG/Dynamic/niLvFpga_Run_Dynamic.vi"/>
+			<Item Name="niLvFpgaAdjustHostInterfaceError.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaAdjustHostInterfaceError.vi"/>
+			<Item Name="niLvFpgaErrorClusterFromErrorCode.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaErrorClusterFromErrorCode.vi"/>
+			<Item Name="niLvFpgaFormatErrorSource.vi" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaFormatErrorSource.vi"/>
+			<Item Name="niLvFpgaWhatHappensToTopLevelVI.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/errors/niLvFpgaWhatHappensToTopLevelVI.ctl"/>
+			<Item Name="nirio_resource_hc.ctl" Type="VI" URL="/&lt;vilib&gt;/userdefined/High Color/nirio_resource_hc.ctl"/>
+			<Item Name="nirviErrorClusterFromErrorCode.vi" Type="VI" URL="/&lt;vilib&gt;/RVI Host/nirviSupport.llb/nirviErrorClusterFromErrorCode.vi"/>
+			<Item Name="nirviWhatTheDeviceIsDoing.ctl" Type="VI" URL="/&lt;vilib&gt;/rvi/ClientSDK/nirviWhatTheDeviceIsDoing.ctl"/>
 			<Item Name="OI Mode.ctl" Type="VI" URL="../../iRobot/Sensor/OI Mode.ctl"/>
 			<Item Name="OpCode.ctl" Type="VI" URL="../../iRobot/Advanced/Command/OpCode.ctl"/>
 			<Item Name="Parse 8.vi" Type="VI" URL="../../iRobot/Sensor/Advanced/Parse 8.vi"/>
